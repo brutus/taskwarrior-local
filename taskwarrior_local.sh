@@ -12,7 +12,7 @@ mktaskdb ()
     if [[ ! -e .task ]]; then
       mkdir .task
     fi
-    echo "data.location=\"$(pwd)/.task\"" > .taskrc
+    echo "data.location=$(pwd)/.task" > .taskrc
   fi
 }
 
