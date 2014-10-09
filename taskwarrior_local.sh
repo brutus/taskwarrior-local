@@ -7,12 +7,18 @@ mktaskdb ()
 {
   # start a local ($PWD) tasklist
   if [[ -e .taskrc ]]; then
-    echo "[ERROR] a local Taskwarrior config already exists."
+    echo "[ERROR] a Taskwarrior config already exists here."
   else
+    # include global settings
+    if [[ -e ~/.taskrc ]]; then
+      echo "include ~/.taskrc" > .taskrc
+    fi
+    # use local DB
+    echo "data.location=$(pwd)/.task" >> .taskrc
+    # create local DB if needed
     if [[ ! -e .task ]]; then
       mkdir .task
     fi
-    echo "data.location=$(pwd)/.task" > .taskrc
   fi
 }
 
