@@ -1,19 +1,19 @@
 # Taskwarrior Local
 
-A set of shell functions to use a directory local [Taskwarrior] DB instead
-of the global one.
+A set of shell functions to use [Taskwarrior] wit a a directory local DB
+instead of the global one.
 
 
 ## Usage
 
-Source the script from your shell or `.bashrc`, `.bash_aliases` or similar.
+Source the script from your shell, `.bashrc`, `.bash_aliases` or similar.
 
 The script provides two functions / commands:
 
 * `mktaskdb`
 
-  Creates a `.task` directory for the DB and a `.taskrc` file that points to
-  it - both in the local directory (and only if they don't exists already).
+  Creates a `.taskwarrior` directory for the DB and a `.taskrc` file that points
+  to it - both in the local directory (and only if they don't exists already).
 
 * `local-task` (alias: `ltask` and `lt`)
 

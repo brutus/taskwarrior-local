@@ -1,7 +1,9 @@
-# TASKWARRIOR
-
-# functions to easily use TASKWARRIOR with local settings on a *per directory*
-# base instead of using the global task registry.
+# TASKWARRIOR LOCAL
+#
+# Functions to easily use TASKWARRIOR with local settings on a
+# *per directory* base instead of using the global task DB.
+#
+# https://taskwarrior.org/
 
 mktaskdb ()
 {
@@ -14,10 +16,10 @@ mktaskdb ()
       echo "include ~/.taskrc" > .taskrc
     fi
     # use local DB
-    echo "data.location=$(pwd)/.task" >> .taskrc
+    echo "data.location=$(pwd)/.taskwarrior" >> .taskrc
     # create local DB if needed
-    if [[ ! -e .task ]]; then
-      mkdir .task
+    if [[ ! -e .taskwarrior ]]; then
+      mkdir .taskwarrior
     fi
   fi
 }
