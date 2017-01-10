@@ -1,7 +1,9 @@
 # TASKWARRIOR LOCAL
 #
-# Functions to easily use TASKWARRIOR with local settings on a
-# *per directory* base instead of using the global task DB.
+# A couple of shell functions to easily use Taskwarrior with directory
+# local task databases. These local DBs can be used alongside the global one
+# (defined in the main config file or taken from defaults) but don't
+# interfere with it in any way.
 #
 # https://taskwarrior.org/
 
